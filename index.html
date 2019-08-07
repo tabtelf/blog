@@ -1,12 +1,129 @@
-Gentoo系统中emacs程序中文字体显示问题
-问题： 部分中文不能正常显示
-分析1：没有相关字体？设置字体？
-解决办法： 搜索 emacs 中文字体配置，
-结果： 
-1. 设置不生效
-2. 设置报错，似乎没有相关字体
-分析2: emacs 无法读取系统字体？ 
-解决办法： 搜索 gentoo emacs fonts 
-结果：
-依照 Xft support for GNU Emacs  https://wiki.gentoo.org/wiki/Xft_support_for_GNU_Emacs 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.8.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.8.0/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.8.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><p class="date">Created: 2019-08-08 四 00:35</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgadbc977">1. Gentoo系统中emacs程序中文字体显示问题</a>
+<ul>
+<li><a href="#/slide-org50e1965">1.1. 问题</a></li>
+<li><a href="#/slide-org7ad99ab">1.2. 分析：</a></li>
+<li><a href="#/slide-orgcf08485">1.3. 解决办法:</a></li>
+<li><a href="#/slide-org6dc2667">1.4. 结果：</a></li>
+<li><a href="#/slide-orgcc8879f">1.5. 分析2：</a></li>
+<li><a href="#/slide-orgf516e96">1.6. 解决方案：</a></li>
+<li><a href="#/slide-org42c4748">1.7. 结果：</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<p>
+#+:TITLE 
+</p>
+<section>
+<section id="slide-orgadbc977">
+<h2 id="orgadbc977"><span class="section-number-2">1</span> Gentoo系统中emacs程序中文字体显示问题</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</section>
+<section id="slide-org50e1965">
+<h3 id="org50e1965"><span class="section-number-3">1.1</span> 问题</h3>
+<p>
+部分中文不能正常显示
+</p>
+</section>
+<section id="slide-org7ad99ab">
+<h3 id="org7ad99ab"><span class="section-number-3">1.2</span> 分析：</h3>
+<p>
+没有相关字体？ 设置字体？
+</p>
+</section>
+<section id="slide-orgcf08485">
+<h3 id="orgcf08485"><span class="section-number-3">1.3</span> 解决办法:</h3>
+<p>
+搜索 emacs 中文字体配置
+</p>
+</section>
+<section id="slide-org6dc2667">
+<h3 id="org6dc2667"><span class="section-number-3">1.4</span> 结果：</h3>
+<ol>
+<li>设置不生效</li>
+<li>设置报错， 似乎没有相关字体</li>
+
+</ol>
+</section>
+<section id="slide-orgcc8879f">
+<h3 id="orgcc8879f"><span class="section-number-3">1.5</span> 分析2：</h3>
+<p>
+emacs 无法读取系统字体？
+</p>
+</section>
+<section id="slide-orgf516e96">
+<h3 id="orgf516e96"><span class="section-number-3">1.6</span> 解决方案：</h3>
+<p>
+搜素 gentoo emacs fonts
+</p>
+</section>
+<section id="slide-org42c4748">
+<h3 id="org42c4748"><span class="section-number-3">1.7</span> 结果：</h3>
+<p>
+依照 <a href="https://wiki.gentoo.org/wiki/Xft_support_for_GNU_Emacs">Xft support for GNU Emacs</a>
 问题解决
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.8.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.8.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.8.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.8.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.8.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.8.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

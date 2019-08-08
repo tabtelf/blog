@@ -1,4 +1,6 @@
-#+TITLE: 我的博客
+#+title: 我的博客
+#+author: tabtelf
+#+options: h:1 num:nil toc:nil
 
 * Gentoo系统中emacs程序中文字体显示问题
 ** 问题
